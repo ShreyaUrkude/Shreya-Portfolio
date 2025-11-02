@@ -1,0 +1,270 @@
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #eef1f6;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  width: 90%;
+  max-width: 1100px;
+  height: 90vh;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+
+aside {
+  width: 230px;
+  background: linear-gradient(180deg, #1e3c72, #2a5298);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 18px;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 15px 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ffcc70;
+  transform: translateX(5px);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  opacity: 0.8;
+}
+
+
+.content-section {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+
+#home {
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.profile-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #1e3c72;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.profile-details h1 {
+  margin: 15px 0 8px;
+  font-size: 1.8rem;
+  color: #1e3c72;
+}
+
+.typewriter {
+  color: #2a5298;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#home p {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+#bio {
+  animation: fadeIn 0.5s ease-in;
+  line-height: 1.7;
+}
+#bio p {
+   font-size: 20px;
+}
+.download-resume {
+  display: inline-block;
+  background: #1e3c72;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  margin-top: 15px;
+  width: 150px;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+.download-resume:hover {
+  background: #2a5298;
+}
+
+
+#skills {
+  animation: fadeIn 0.5s ease-in;
+}
+
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+
+#skills li {
+  background-color: #f0f4ff;
+  border: 1px solid #dbe2f3;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#skills li:hover {
+  background: #1e3c72;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+
+#projects {
+  animation: fadeIn 0.5s ease-in;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e3c72;
+}
+
+#projects ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+#projects li {
+  background-color: #f8faff;
+  border-radius: 10px;
+  border: 1px solid #dbe2f3;
+  width: 500px;
+  
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#projects li:hover {
+  transform: translateY(-5px);
+}
+
+#projects img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+#contact {
+  animation: fadeIn 0.5s ease-in;
+  line-height: 1.8;
+}
+
+#contact a {
+  color: #2a5298;
+  text-decoration: none;
+  font-weight: 500;
+}
+ #contact p {
+  font-size: 20px;
+ }
+#contact a:hover {
+  text-decoration: underline;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 900px) {
+  body {
+    height: auto;
+  }
+
+  .main-container {
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+  }
+
+  aside {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .content-section {
+    padding: 25px;
+  }
+
+  #projects ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
