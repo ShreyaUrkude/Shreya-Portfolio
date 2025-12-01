@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -21,7 +20,7 @@ body {
   overflow: hidden;
 }
 
-
+/* SIDEBAR */
 aside {
   width: 230px;
   background: linear-gradient(180deg, #1e3c72, #2a5298);
@@ -69,14 +68,14 @@ footer {
   opacity: 0.8;
 }
 
-
+/* MAIN CONTENT */
 .content-section {
   flex: 1;
   padding: 40px;
   overflow-y: auto;
 }
 
-
+/* HOME */
 #home {
   text-align: center;
   animation: fadeIn 0.5s ease-in;
@@ -109,14 +108,16 @@ footer {
   color: #555;
 }
 
-
+/* BIO */
 #bio {
   animation: fadeIn 0.5s ease-in;
   line-height: 1.7;
 }
+
 #bio p {
-   font-size: 20px;
+  font-size: 20px;
 }
+
 .download-resume {
   display: inline-block;
   background: #1e3c72;
@@ -133,14 +134,14 @@ footer {
   background: #2a5298;
 }
 
-
+/* SKILLS */
 #skills {
   animation: fadeIn 0.5s ease-in;
 }
 
 #skills ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 12px;
   list-style: none;
   padding: 0;
@@ -162,7 +163,7 @@ footer {
   transform: scale(1.05);
 }
 
-
+/* PROJECTS */
 #projects {
   animation: fadeIn 0.5s ease-in;
 }
@@ -187,7 +188,6 @@ footer {
   border-radius: 10px;
   border: 1px solid #dbe2f3;
   width: 500px;
-  
   padding: 15px;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -211,10 +211,14 @@ footer {
   color: #555;
 }
 
-
+/* CONTACT */
 #contact {
   animation: fadeIn 0.5s ease-in;
   line-height: 1.8;
+}
+
+#contact p {
+  font-size: 20px;
 }
 
 #contact a {
@@ -222,14 +226,12 @@ footer {
   text-decoration: none;
   font-weight: 500;
 }
- #contact p {
-  font-size: 20px;
- }
+
 #contact a:hover {
   text-decoration: underline;
 }
 
-
+/* ANIMATION */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -241,7 +243,7 @@ footer {
   }
 }
 
-
+/* TABLET RESPONSIVE */
 @media (max-width: 900px) {
   body {
     height: auto;
@@ -257,14 +259,86 @@ footer {
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
+    padding: 15px;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
   }
 
   .content-section {
     padding: 25px;
   }
 
-  #projects ul {
-    flex-direction: column;
-    align-items: center;
+  #projects li {
+    width: 90%;
   }
 }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .profile-img img {
+    width: 150px;
+    height: 150px;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  #skills ul {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  #projects img {
+    height: 150px;
+  }
+
+  #projects li {
+    width: 100%;
+  }
+
+  .content-section {
+    padding: 20px;
+  }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 430px) {
+  aside {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .profile-details h1 {
+    font-size: 1.4rem;
+  }
+
+  #bio p,
+  #contact p {
+    font-size: 16px;
+  }
+
+  #projects img {
+    height: 130px;
+  }
+}
+
