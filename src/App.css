@@ -309,7 +309,7 @@ footer {
 }
 
 /* VERY SMALL PHONES */
-@media (max-width: 430px) {
+@media (max-width: 450px) {
   aside {
     flex-direction: column;
     text-align: center;
